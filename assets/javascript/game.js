@@ -19,33 +19,45 @@ function start() {
     $(".green").attr("greenNum", greenNum);
 }
 start();
-
 // making it so that each picture when pressed will add to the collected counter
 $(".blue").on("click", function() {
     var gemValue = $(this).attr("blueNum");
     gemValue = parseInt(gemValue);
     gemCounter += gemValue;
     $(".gem-value").text(gemCounter);
+    check()
 })
 $(".violet").on("click", function() {
     var gemValue = $(this).attr("violetNum");
     gemValue = parseInt(gemValue);
     gemCounter += gemValue;
     $(".gem-value").text(gemCounter);
+    check()
 })
 $(".red").on("click", function() {
     var gemValue = $(this).attr("redNum");
     gemValue = parseInt(gemValue);
     gemCounter += gemValue;
     $(".gem-value").text(gemCounter);
+    check()
 })
 $(".green").on("click", function() {
     var gemValue = $(this).attr("greenNum");
     gemValue = parseInt(gemValue);
     gemCounter += gemValue;
     $(".gem-value").text(gemCounter);
+    check()
 })
 
-if (gemCounter === ranNum) {
+function check() {
+    if (gemCounter === ranNum) {
+        wins ++;
+        $(".won").text(wins);
+        start();
+    } else if (gemCounter > ranNum){
+        loss ++;
+        $(".lost").text(loss);
+        start();
+    }
 
 }
