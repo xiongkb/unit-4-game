@@ -1,17 +1,25 @@
 // variables to be listed
-var ranNum = Math.floor(Math.random()*102)+19;  //will add 19 so it starts at 19. random number for "gen-num"
-var gemCounter = 0;
+var ranNum;  //will add 19 so it starts at 19. random number for "gen-num"
+var gemCounter;
 var wins = 0;
 var loss = 0;
 
 // hidden gem value "gem-value"
-var blueNum = Math.floor(Math.random()*12)+1;
-var violetNum = Math.floor(Math.random()*12)+1;
-var redNum = Math.floor(Math.random()*12)+1;
-var greenNum = Math.floor(Math.random()*12)+1;
+var blueNum;
+var violetNum;
+var redNum;
+var greenNum;
 
-// showing the randomNUmber that player needs to match
+// showing the randomNUmber that player needs to match. Will reset each time a game is won or lost
 function start() {
+    ranNum = Math.floor(Math.random()*102)+19;
+    gemCounter = 0;
+    blueNum = Math.floor(Math.random()*12)+1;
+    violetNum = Math.floor(Math.random()*12)+1;
+    redNum = Math.floor(Math.random()*12)+1;
+    greenNum = Math.floor(Math.random()*12)+1;
+
+    $(".gem-value").text(gemCounter);
     $(".gen-num").text(ranNum);
     $(".blue").attr("blueNum", blueNum);
     $(".violet").attr("violetNum", violetNum);
