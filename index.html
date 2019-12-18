@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Number Game</title>
+</head>
+<body>
+    <!-- title of the game here -->
+    <h1>Crystal Collector Game</h1>
+
+    <!-- instruction for the game -->
+    <div>
+        <h3>Intro</h3>
+        <p>
+            There will be a number generated randomly. Your goal is to try and match that number with the crystals.
+        </p>
+        <p>
+            There are four crystals below. Each crystal is worth different points. Click on them to see how much they 
+            will add.
+        </p>
+        <p>
+            You win if you collect enough crystals to match the number. If you go over, then it's an automatic loss. 
+            When you lose, the number you have to match will change and you can try again with that number.
+        </p>
+        <p>
+            Keep in mind that when you lose or win, the the value of the crystals will change each time.
+        </p>
+    </div>
+
+    <!-- generated number -->
+    <div>
+        <p>The number you need to try and match:</p>
+        <div class="gen-num"></div>
+    </div>
+
+    <!-- Crystals that are worth a random value -->
+    <div>
+        <img alt="blue crystal" src="./assets/images/blue.jpeg" onclick="blue()">
+        <img alt="violet crystal" src="./assets/images/violet.jpeg" onclick="violet()">
+        <img alt="red crystal" src="./assets/images/red.jpeg" onclick="red()">
+        <img alt="green crystal" src="./assets/images/green.jpeg"onclick="green()">
+    </div>
+
+    <!-- cystral total value to be shown -->
+    <div>
+        <p>The total value of the crystals you calculated:</p>
+        <div class="gem-value"></div>
+    </div>
+
+    <!-- score board -->
+    <div>
+        <div>Wins: </div>
+        <div>Losses: </div>
+    </div>
+
+    <!-- connecting jquery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
