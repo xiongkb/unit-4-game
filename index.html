@@ -1,68 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Crystal Number Game</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Concert+One|Courier+Prime&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Concert+One|Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- title of the game here -->
     <h1 class="title">Crystal Collector Game</h1>
-    
-
-    <!-- instruction for the game -->
-    <div class="body-style intro">
+    <div class="container">
+      <!-- instruction for the game -->
+      <div class="body-style intro">
         <h3 class="subtitle">Intro</h3>
         <p>
-            There will be a number generated randomly. Your goal is to try and match that number with the crystals.
-        </p><br>
-        <p>
-            There are four crystals below. Each crystal is worth different points. Click on them to see how much they 
-            will add.
-        </p><br>
-        <p>
-            You win if you collect enough crystals to match the number. If you go over, then it's an automatic loss. 
-            When you lose, the number you have to match will change and you can try again with that number.
-        </p><br>
-        <p>
-            Keep in mind that when you lose or win, the the value of the crystals will change each time.
+          There will be a number generated randomly. Your goal is to try and
+          match that number with the crystals.
         </p>
-    </div>
+        <br />
+        <p>
+          There are four crystals below. Each crystal is worth different points.
+          Click on them to see how much they will add.
+        </p>
+        <br />
+        <p>
+          You win if you collect enough crystals to match the number. If you go
+          over, then it's an automatic loss. When you lose, the number you have
+          to match will change and you can try again with that number.
+        </p>
+        <br />
+        <p>
+          Keep in mind that when you lose or win, the the value of the crystals
+          will change each time.
+        </p>
+      </div>
 
-    <div class="clearfix">
-        <!-- generated number -->
-        <div class="body-style generated-num">
+      <div class="container-2">
+        <div class="number-goal">
+          <!-- generated number -->
+          <div class="body-style generated-num">
             <p>The number you need to try and match:</p>
             <div class="gen-num number"></div>
-        </div>
+          </div>
 
-        <!-- score board -->
-        <div class="body-style scoreboard">
-            <div>Wins: <span class="won"></span></div><br>
+          <!-- score board -->
+          <div class="body-style scoreboard">
+            <div>Wins: <span class="won"></span></div>
+            <br />
             <div>Losses: <span class="lost"></span></div>
+          </div>
         </div>
-    </div>
 
-    <!-- Crystals that are worth a random value -->
-    <div class="pic-wrapper">
-        <img class="blue images" alt="blue crystal" src="./assets/images/blue.jpeg">
-        <img class="violet images" alt="violet crystal" src="./assets/images/violet.jpeg">
-        <img class="red images" alt="red crystal" src="./assets/images/red.jpeg">
-        <img class="green images" alt="green crystal" src="./assets/images/green.jpeg">
-    </div>
+        <!-- Crystals that are worth a random value -->
+        <div class="pic-wrapper">
+          <img
+            class="blue images"
+            alt="blue crystal"
+            src="./assets/images/blue.jpeg"
+          />
+          <img
+            class="violet images"
+            alt="violet crystal"
+            src="./assets/images/violet.jpeg"
+          />
+          <img
+            class="red images"
+            alt="red crystal"
+            src="./assets/images/red.jpeg"
+          />
+          <img
+            class="green images"
+            alt="green crystal"
+            src="./assets/images/green.jpeg"
+          />
+        </div>
 
-    <!-- cystral total value to be shown -->
-    <div class="body-style player-points">
-        <p>The total value of the crystals you calculated:</p>
-        <div class="gem-value number"></div>
+        <!-- cystral total value to be shown -->
+        <div class="body-style player-points">
+          <p>The total value of the crystals you calculated:</p>
+          <div class="gem-value number"></div>
+        </div>
+      </div>
     </div>
-
     <!-- connecting jquery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
-</body>
+  </body>
 </html>
